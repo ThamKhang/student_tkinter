@@ -1,62 +1,44 @@
-# Student Management System
+# Quản Lý Sinh Viên - Python GUI App
 
-This project is a **Student Management System** with a user-friendly GUI built using **Tkinter**. It allows users to manage student information, track absences, generate reports, process emails, and apply filtering and sorting on student data. 
+This is a Python GUI application built with Tkinter for managing student information, absences, and related tasks. 
 
 ## Features
-- **Add, View, and Delete Students:** Easily manage student records including student IDs, class codes, names, and total absences.
-- **Absence Tracking:** Track student absences and display total absences per course.
-- **Filter and Sort Students:** Sort students by name, total absences, class, or subject. Filter by class or absence count.
-- **Excel Data Import:** Load student data from Excel files stored in a specific directory.
-- **Email Processing:** Monitor incoming emails for student-related queries, check replies, and auto-generate reports.
-- **Chat Box Integration:** Includes a chatbot for basic student information management.
 
-## Setup
+* **Student Data Management:**
+    * Load student data from Excel files (`class_list` directory).
+    * Database integration (using `sqlite3`).
+    * Search and filtering by name, MSSV (Student ID), class, subject, and absences.
+    * Add and delete student records.
+    * View detailed student information with absence details, total classes, and absence percentage.
+* **Absences Management:**
+    * View a treeview of absence records for selected students.
+    * Calculate total classes, total absences, and absence percentage.
+* **Report Generation:**
+    * Generate reports summarizing student data (requires implementation).
+    * Warn students with excessive absences.
+* **Email Handling:**
+    * Send emails (using `smtplib`).
+    * Automatically process emails (requires implementation).
+    * Check if emails have been replied to within 24 hours.
+* **Chat Box Integration:**
+    * Chat box functionality (requires implementation).
+* **User Interface:**
+    * User-friendly GUI using Tkinter.
+    * Comboboxes and checkboxes for easy selection and filtering.
+    * Centralized window management.
 
-1. **Install Dependencies:**  
-   Ensure you have Python installed. Required libraries include `tkinter`, `ttk`, `pandas`, and `openpyxl` (for Excel handling).
+## Requirements
 
+* Python 3
+* Tkinter
+* `sqlite3` (optional)
+* `smtplib` (for email handling)
+
+## Installation
+
+1. Install Python 3.
+2. Install Tkinter (usually comes with Python).
+3. Install other required libraries:
    ```bash
-   pip install pandas openpyxl
-Directory Structure:
-Organize your project files as follows:
-
-kotlin
-Sao chép mã
-student_management/
-    ├── functions.py
-    ├── data.py
-    ├── email_handler.py
-    ├── getter_data.py
-    ├── report.py
-    ├── ...
-utils.py
-gui.py
-README.md
-Run the Application:
-Execute the main GUI file to start the application.
-
-bash
-Sao chép mã
-python gui.py
-Usage
-Main Window
-Load Excel Data: Select an Excel file from the class_list directory to populate the student data.
-Search: Search for students by name or student ID (MSSV).
-Filter & Sort Options: Select sorting criteria (name, total absences, class, subject) and apply filters by class or minimum absences.
-Add, View, and Delete Students: Add new students, view details, and delete records as needed.
-Reports and Email Handling: Generate absence reports and monitor email inbox for queries or reports not replied to within 24 hours.
-Chat Box: Access a chatbot for interactive student information management.
-Requirements
-Python 3.6 or higher
-tkinter (usually included with Python)
-pandas and openpyxl for Excel handling
-Contributing
-Contributions to improve the functionality or design are welcome! Feel free to submit pull requests or open issues for feedback.
-
-License
-This project is licensed under the MIT License.
-
-vbnet
-Sao chép mã
-
-This README provides an overview of features, setup instructions, and usage details for users to get started with the application.
+   pip install sqlite3
+   pip install smtplib
