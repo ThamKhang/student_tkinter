@@ -1,0 +1,11 @@
+openpyxl~=3.1.5
+pandas~=2.2.3
+email
+smtplib
+ssl
+re
+os
+datetime~=5.5
+tkinter
+utils~=1.0.2
+login~=0.0.6
